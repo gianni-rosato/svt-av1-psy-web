@@ -44,7 +44,8 @@ body, html {
     font-family: 'Apfel Grotezk', Arial, sans-serif;
 }
 .navbar a:hover {
-    color:oklch(88.52% 0.2002 194.77);
+    color: oklch(88.52% 0.2002 194.77);
+    cursor: pointer;
 }
 .banner {
     position: relative;
