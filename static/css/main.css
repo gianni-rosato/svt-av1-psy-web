@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Apfel Grotezk';
+    src: url('/static/fonts/ApfelGrotezk-Regular.woff2') format("woff2");
+    font-weight: unset;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mattone';
+    src: url('/static/fonts/Mattone-Bold.woff2') format("woff2");
+    font-weight: unset;
+    font-style: normal;
+}
+body, html {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: 'Apfel Grotezk', Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
+}
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+.navbar a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Apfel Grotezk', Arial, sans-serif;
+}
+.navbar a:hover {
+    color:oklch(88.52% 0.2002 194.77);
+}
+.banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+.banner-content h1 {
+    color: white;
+    font-size: 4rem;
+    font-family: 'Mattone';
+    text-shadow: 2px 2px 4px oklch(70.59% 0.1621 194);
+    line-height: 1;
+}
+.content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.content h2 {
+    font-size: 1.5rem;
+    font-family: 'Mattone';
+    text-shadow: 1px 1px 2px oklch(70.59% 0.1621 194);
+    line-height: 1.6;
+}
+.content p {
+    font-size: 1.2rem;
+}
+.section {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: start;
+}
+.section-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+.section-image {
+    flex: 0 0 300px;
+}
+.section-image img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}

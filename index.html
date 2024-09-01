@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <title>SVT-AV1-PSY</title>
+</head>
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <a href="/about/">About</a>
+            <a href="/video/">Video</a>
+            <a href="/avif/">AVIF</a>
+            <a href="/download/">Download</a>
+        </nav>
+    </div>
+
+    <header class="banner">
+        <img src="/static/images/psy_header.avif" alt="SVT-AV1-PSY Banner">
+        <div class="banner-content">
+            <h1>SVT-AV1-PSY</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <section id="about" class="section">
+            <div class="section-text">
+                <h2>Built For Your Eyes</h2>
+                <p>SVT-AV1-PSY is a software video encoder born from the SVT-AV1 project. Our encoder is designed for <em>optimal perceptual fidelity</em>; we have optimized heavily around pleasing the human visual system, and we aim to provide the best perceptual fidelity available in any AV1 video encoder across a wide quality spectrum.</p>
+            </div>
+            <div class="section-image">
+                <picture>
+                    <source srcset="/static/images/posterized_eye.jxl" type="image/jxl" />
+                    <img src="/static/images/posterized_eye.avif" loading="lazy" width=300 height=200 alt="About SVT-AV1-PSY">
+                </picture>
+            </div>
+        </section>
+
+        <section id="video" class="section">
+            <div class="section-text">
+                <h2>Video Encoding</h2>
+                <p>Taking human visual preferences into account in our design has proven difficult, but the results are inspiring. Our video encoder is the best in the industry for AV1, and even competes with encoders for newer standards like VVC (H.266).</p>
+            </div>
+            <div class="section-image">
+                <picture>
+                    <source srcset="/static/images/foodmarket_thumb.jxl" type="image/jxl" />
+                    <img src="/static/images/foodmarket_animated.avif" loading="lazy" width=300 height=200 alt="Video Encoding">
+                </picture>
+            </div>
+        </section>
+
+        <section id="avif" class="section">
+            <div class="section-text">
+                <h2>Image Compression</h2>
+                <p>In addition to video encoding, SVT-AV1-PSY also supports class-leading AVIF compression. Building on our existing technical supremacy in video contexts, we have been able to produce a powerful AVIF encoder competitive with industry standard AVIF & JPEG-XL encoders.</p>
+            </div>
+            <div class="section-image">
+                <picture>
+                    <img src="/static/images/avif-logo.webp" loading="lazy" width=300 height=200 alt="AVIF Support">
+                </picture>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
