@@ -29,16 +29,27 @@
     <main class="content">
         <section id="about" class="section">
             <div class="section-text">
-                <h2>Coming Soon</h2>
-                <p>Check back soon for more info!</p>
+                <h2>Class-Leading Performance</h2>
+                <p>We've tuned our AVIF performance via industry-standard benchmarks for perceptual fidelity, such as SSIMULACRA2. However, we did not just stop at metric scores; there are always outliers in a metric's correlation with our vision, so SVT-AV1-PSY's AVIF results have undergone extensive visual inspection and additional tuning to ensure consistency is preserved in any source. </p>
             </div>
             <div class="section-image">
                 <picture>
-
+                    <img src="/static/images/needles_image.avif" loading="lazy" width=300 height=200 alt="Tree Needles">
                 </picture>
             </div>
         </section>
-
+        <div class="image-container">
+            <picture>
+                <img src="/static/images/avif-gb82.svg" width="663" height="496" loading="lazy" alt="gb82 Dataset - AVIF Performance">
+            </picture>
+            <p class="image-caption">Performance as a ratio of size to measured quality across the gb82 image dataset</p>
+        </div>
+        <div class="image-container">
+            <picture>
+                <img src="/static/images/avif-cid22.svg" width="663" height="496" loading="lazy" alt="gb82 Dataset - AVIF Performance">
+            </picture>
+            <p class="image-caption">Performance as a ratio of size to measured quality across the CID22 image dataset by Cloudinary</p>
+        </div>
     </main>
 </body>
 </html>
