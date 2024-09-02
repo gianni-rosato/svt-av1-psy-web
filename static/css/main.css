@@ -10,6 +10,14 @@
     font-weight: unset;
     font-style: normal;
 }
+a {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: oklch(88.52% 0.2002 194.77);
+}
+li {
+    font-size: 1.2rem;
+}
 body, html {
     background-color: black;
     margin: 0;
