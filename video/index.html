@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/css/main.css" rel="stylesheet">
     <link href="/static/css/remedy.css" rel="stylesheet">
+    <link href="/static/css/code.css" rel="stylesheet">
     <title>SVT-AV1-PSY</title>
 </head>
 <body>
@@ -32,13 +33,57 @@
     <main class="content">
         <section id="about" class="section">
             <div class="section-text">
-                <h2>Coming Soon</h2>
-                <p>Check back soon for more info!</p>
+                <h2>Cutting Edge Video Compression</h2>
+                <p>With SVT-AV1-PSY, we believe that we've created an encoder that isn't just capable of competing with the best in the business for AV1, but for newer codecs like VVC as well. The maturity of the x264 encoder allowed it to be a credit to the H.264 codec and improve its perception across the board, and we wish to achieve the same for AV1. The mainline SVT-AV1 project has done incredible work in providing a fast and powerful encoder for AV1, and efforts have been directed toward improving metric scores - our work has focused on producing visually compelling results.</p>
             </div>
             <div class="section-image">
                 <picture>
-
+                    <img src="/static/images/circuit.avif" loading="lazy" alt="Circuit Board">
                 </picture>
+            </div>
+        </section>
+        <section id="about" class="section">
+            <div class="section-text">
+                <h2>Techniques</h2>
+                <p>There are a number of custom feature implementations that our encoder has pioneered for AV1. Some of these have made their way into the mainline encoder.</p>
+                <h3>Variance Boost</h3>
+                <p>This feature helps keep video quality consistent, even when scenes change between high and low contrast (light vs dark). It gives you control over how aggressively the encoder adjusts quality in such scenarios. Four options let you pick how mild or strong the adjustments are.</p>
+                <h3>Variance Octile</h3>
+                <p>Think of this as deciding how "picky" the encoder is when it chooses to enhance certain blocks of a video. Low values mean it’s less picky and will improve quality in more areas, which increases file size. High values mean it’s more selective, only boosting quality where it’s really needed.</p>
+                <h3>Alternate Variance Boost Curve</h3>
+                <p>This feature activates an alternative way for the encoder to distribute the video data, which can make the video look different.</p>
+                <h3>Presets -2 & -3</h3>
+                <p>These presets are designed to provide maximum compression. The encoder works much harder to compress the video, making compression far slower.</p>
+                <h3>Tune 3</h3>
+                <p>This option trades off some technical, metric-aligned video quality (measured by a computer) for better visual appearance to the human eye.</p>
+                <h3>Tune 4</h3>
+                <p>Designed for encoding still images. See the <a href="/avif/">AVIF</a> page for more information.</p>
+                <h3>Sharpness</h3>
+                <p>This parameter allows the encoder to favor a sharper look when encoding. You can also set it to be a negative value to make the video smoother</p>
+                <h3>Dolby Vision & HDR10+</h3>
+                <p>Using external libraries, SVT-AV1-PSY produce Dolby Vision or HDR10+ video streams through special parameters.</p>
+                <h3>Film Grain Table</h3>
+                <p>Adds a simulated film grain effect to make digital video look more like film. While this is already present in SVT-AV1, this feature lets you fine-tune the grain effect by providing an external file for a more natural look.</p>
+                <h3>Extended CRF</h3>
+                <p>The range of quality values in the mainline SVT-AV1 encoder can be set from 0 to 63. In SVT-AV1-PSY, it can be set from 0 to 70, in addition to allowing quarter-step increments (42.25, 42.5, 42.75, etc).</p>
+                <h3>DLF 2</h3>
+                <p>This setting improves the way the encoder smooths out blocky artifacts in the video. It’s a little slower, but it makes the video look cleaner, especially when using fast encoding presets.</p>
+                <h3>Higher-quality presets for 8K</h3>
+                <p>Unlocks presets for 8k encoding that were previously considered too slow for actual use.</p>
+                <h3>Frame Luma Bias</h3>
+                <p>Helps improve the quality of dark scenes by making adjustments based on how bright or dark each frame is.</p>
+                <h3>Max 32 Transform Size</h3>
+                <p>Limits the size of certain image blocks used in compression to help keep more detail in high-quality settings. In extremely specific scenarios, this can help with detail retention at high fidelity.</p>
+                <h3>Adaptive Film Grain</h3>
+                <p>If using film grain, SVT-AV1-PSY automatically adjusts how synthetic film grain is applied based on the resolution of the video, making it look more consistent across different videos.</p>
+                <h3>Temporal Filtering Strength</h3>
+                <p>Controls how much the encoder smooths out differences between frames. Increasing this makes the video less flickery but might blur fine details.</p>
+                <h3>Chroma Quantization Matrix Control</h3>
+                <p>Setting a custom QM minimum &amp; maximum for chroma in SVT-AV1-PSY gives you more control over color quality, allowing you to fine-tune how the color parts of the video are compressed separately from the brightness parts.</p>
+                <h3>Better Defaults</h3>
+                <p>We've improved the defaults to automatically handle 10-bit video, disable film grain denoising, default to a different tuning for better quality, and more.</p>
+                <h3>Quality of Life</h3>
+                <p>There are some quality of life improvements in SVT-AV1-PSY for those who interact with the encoder often. These include a formatted Help menu on macOS & Linux machines, a Color Help menu for helping you to choose the right parameters for HDR encoding, and a new progress option that prints detailed statistics when you encode.</p>
             </div>
         </section>
 
