@@ -126,12 +126,12 @@ note: |
 
 category: embedded elements
 */
-img, svg, video, canvas, audio, iframe, embed, object {
+/* img, svg, video, canvas, audio, iframe, embed, object {
   display: block;
   vertical-align: middle;
   max-width: 100%;
 }
-audio:not([controls]) { display:none; }
+audio:not([controls]) { display:none; } */
 
 
 /* @docs

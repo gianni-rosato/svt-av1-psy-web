@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/remedy.css" rel="stylesheet">
+    <link href="/static/css/button.css" rel="stylesheet">
+    <link href="/static/css/code.css" rel="stylesheet">
+    <title>SVT-AV1-PSY</title>
+</head>
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/video/">Video</a>
+            <a href="/avif/">AVIF</a>
+            <a>Releases</a>
+            <a href="/download/">Download</a>
+        </nav>
+    </div>
+
+    <header class="banner">
+        <picture>
+            <source srcset="/static/images/releases_banner.jxl" type="image/jxl">
+            <img src="/static/images/releases_banner.avif" alt="Video Banner">
+        </picture>
+        <div class="banner-content">
+            <h1>Releases</h1>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <div class="button-container">
+            <a href="/download/" class="button">Visit the Downloads page to get the latest release now!  →</a>
+        </div>
+
+        <section id="about" class="section">
+            <div class="section-text">
+                <h2>About Releases</h2>
+                <p>SVT-AV1-PSY releases often feature the same version numbers as mainline releases, as our cadence is in line with theirs. However, this doesn't mean the codebases are identical; SVT-AV1-PSY releases always feature changes. We also have our own micro-release framework that enables us to publish releases outside of the mainline cadence; these will be marked by a letter starting at A, then B, etc. So, v2.1.0-A would succeed v2.1.0. The releases below are also enumerated on our <a href="github.com/gianni-rosato/svt-av1-psy/releases">GitHub Releases page</a>.</p>
+            </div>
+            <div class="section-image">
+                <picture>
+                    <img src="/static/images/github-mark-white.svg" alt="GitHub Logo">
+                </picture>
+            </div>
+        </section>
+
+        <section id="v2.2.1" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.2.1</h2>
+                <p>Just a quick update with a couple of bug fixes &amp; documentation adjustments 🐞</p>
+                <h3 id="psy-updates">PSY Updates</h3>
+                <h4 id="documentation">Documentation</h4>
+                <ul>
+                <li>Fix <code>--tf-strength</code> parameter information in the README</li>
+                <li>Add donation info</li>
+                </ul>
+                <h4 id="bug-fixes">Bug Fixes</h4>
+                <ul>
+                <li>Fix multiple-counting block bug in Tune 3 SSIM rdmult</li>
+                </ul>
+                <h3 id="mainline-updates">Mainline Updates</h3>
+                <h4 id="cleanup-bug-fixes">Cleanup, bug fixes</h4>
+                <ul>
+                <li>Fixed debug arm macOS builds by removing invalid assert</li>
+                </ul>
+                <h3 id="support-us">Support Us</h3>
+                <a href="/about/">See About Page</a>
+                <p><em>Thanks for using SVT-AV1-PSY!</em> &lt;3</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.1">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.1</a></p>
+            </div>
+        </section>
+
+        <section id="v2.2.0" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.2.0</h2>
+                <p>Long time no see! We're back with another exciting release: <strong>SVT-AV1-PSY v2.2.0</strong>! 🎉</p>
+                <h3>PSY Updates</h3>
+                <h4>Features</h4>
+                <ul>
+                    <li><code>--tf-strength</code> parameter for manually adjusting temporal filtering strength. By default, reduces temporal filtering strength by 4x</li>
+                    <li><code>--chroma-qm-min</code> &amp; <code>--chroma-qm-max</code> parameters for adjusting quantization matrix flatness for chroma planes</li>
+                    <li><code>--tune 4</code> - A new Tune called Still Picture has been introduced for AVIF encoding, with promising gains observed over aomenc, aomenc 4:4:4, and mainline SVT-AV1</li>
+                </ul>
+                <h4>Quality &amp; Performance</h4>
+                <ul>
+                    <li>Enable 10-bit subpixel motion estimation processing for 10-bit inputs on Preset 3 &amp; below</li>
+                    <li>Enable SUPERRES_AUTO_ALL for Tune 3 when superres-mode=4
+                        <ul>
+                            <li>Disables ALT-REF superres for speed and quality</li>
+                        </ul>
+                    </li>
+                    <li>Add unipred bias for SSIM full mode decision cost when using Tune 3</li>
+                    <li>New perceptual QM curve when using Tune 3
+                        <ul>
+                            <li>Better chroma QM adjustment &amp; better high fidelity performance</li>
+                        </ul>
+                    </li>
+                    <li>Vastly improved screen content detection when <code>--scm 2</code> is set. Currently only enabled in Tune 4</li>
+                </ul>
+                <h4>Documentation</h4>
+                <ul>
+                    <li><code>--help</code> menu correctly prints maximum CRF value (70)</li>
+                    <li>Default Tune 2 is better reflected across documentation</li>
+                    <li>Updated build documentation</li>
+                    <li>Additional featured projects</li>
+                </ul>
+                <h4>Bug Fixes</h4>
+                <ul>
+                    <li>Scoped down QM disablement to only affect NEON-enabled systems</li>
+                    <li>Scoped down global sharpness features to <code>--sharpness 1</code>, as was the original intention</li>
+                </ul>
+                <h3>Mainline Updates</h3>
+                <h4>API updates</h4>
+                <ul>
+                    <li>No API changes on this release</li>
+                </ul>
+                <h4>Encoder</h4>
+                <ul>
+                    <li>Improve the tradeoffs for the random access mode across presets:
+                        <ul>
+                            <li>Speedup of ~15% across presets M0 - M8 while maintaining similar quality levels</li>
+                        </ul>
+                    </li>
+                    <li>Improve the tradeoffs for the low-delay mode across presets</li>
+                    <li>Increased temporal resolution setting to 6L for 4k resolutions by default</li>
+                    <li>Added ARM optimizations for functions with <code>c_only</code> equivalent yielding an average speedup of ~13% for 4k 10-bit</li>
+                </ul>
+                <h4>Cleanup Build &amp; bug fixes &amp; documentation</h4>
+                <ul>
+                    <li>Profile-guided-optimized helper build overhaul</li>
+                    <li>Major cleanup and fixing of Neon unit test suite</li>
+                    <li>Address stylecheck dependence on public repositories</li>
+                </ul>
+                <h3>Support Us</h3>
+                <a href="/about/">See About Page</a>
+                <p><em>Thanks for using SVT-AV1-PSY!</em> &lt;3</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.0">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.0</a></p>
+            </div>
+        </section>
+
+        <section id="v2.1.0-A" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.1.0-A</h2>
+                <p>Hi there! We're back with our micro-release format to announce some exciting changes in <strong>SVT-AV1-PSY v2.1.0-A</strong>! 🎉</p>
+                <h3>PSY Updates</h3>
+                <h4>Features</h4>
+                <ul>
+                    <li>New parameter <code>--max-32-tx-size</code>, which restricts block transform sizes to a maximum of 32x32 pixels. This can be useful in very specific scenarios for improving overall efficiency</li>
+                    <li>Added support for HDR10+ JSON files via a new <code>--hdr10plus-json</code> parameter (thanks @quietvoid!). In order to build a binary with support for HDR10+, see our <a href="https://github.com/gianni-rosato/svt-av1-psy/blob/master/Docs/PSY-Development.md">PSY Development page</a>.</li>
+                    <li>New parameter <code>--adaptive-film-grain</code>, which helps remedy perceptually harmful grain patterns caused by extracting grain from blocks that are too large for a given video resolution. This parameter is enabled by default</li>
+                </ul>
+                <h4>Quality &amp; Performance</h4>
+                <ul>
+                    <li>Disabled SSIM-cost transform decisions while keeping SSIM-cost mode decisions, generally improving Tune 3's efficiency &amp; consistency</li>
+                    <li>Additional NEON optimizations for ARM platforms, providing a speed increase</li>
+                </ul>
+                <h4>Documentation</h4>
+                <ul>
+                    <li>All of the features present in this release have been documented, so associated documentation has been updated accordingly</li>
+                    <li>Build documentation updated to reflect the HDR10+ build option</li>
+                </ul>
+                <h4>Bug Fixes</h4>
+                <ul>
+                    <li>Disabled quantization matrices for presets 5 and higher due to a visual consistency bug (#56)</li>
+                </ul>
+                <p><em>Thanks for using SVT-AV1-PSY!</em> ♥️</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.1.0-A">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.1.0-A</a></p>
+            </div>
+        </section>
+
+        <section id="v2.1.0" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.1.0</h2>
+                <p>Hi again! We're just barely trailing mainline's recent release to announce some exciting new changes in <strong>SVT-AV1-PSY v2.1.0</strong>! 🎉</p>
+                <h3>PSY Updates</h3>
+                <h4>Documentation</h4>
+                <ul>
+                    <li>Additional PNG images have been transcoded to WebP</li>
+                    <li><a href="https://github.com/gianni-rosato/svt-av1-psy/blob/master/Docs/Appendix-Variance-Boost.md">Variance boost docs</a> feature AVIF &amp; WebP images</li>
+                    <li>Added Staxrip to featured projects in README. Welcome aboard!</li>
+                </ul>
+                <h4>Bug Fixes</h4>
+                <ul>
+                    <li>Removed ANSI escape color sequences for Windows builds (#46)</li>
+                </ul>
+                <h4>Other</h4>
+                <ul>
+                    <li>This major release doesn't have a micro-release letter, &amp; is just labelled <code>PSY Release: N/A</code> - if we're doing a release in line with mainline, PSY release lettering will start at N/A &amp; progress to A, B, etc from there.</li>
+                </ul>
+                <h3>Mainline Updates</h3>
+                <h4>API updates</h4>
+                <ul>
+                    <li>One config parameter added within the padding size. Config param structure size remains unchanged</li>
+                    <li>Presets 6 and 12 are now pointing to presets 7 and 13 respectively due to the lack of spacing between the presets</li>
+                    <li>Further preset shuffling is being discussed in #2152</li>
+                </ul>
+                <h4>Encoder</h4>
+                <ul>
+                    <li>Added variance boost support to improve visual quality for the tune vq mode</li>
+                    <li>Improve the tradeoffs for the random access mode across presets:</li>
+                    <li>Speedup of 12-40% presets M0, M3, M5 and M6 while maintaining similar quality levels</li>
+                    <li>Improved the compression efficiency of presets M11-M13 by 1-2%</li>
+                    <li>Added ARM optimizations for functions with c-only equivalent</li>
+                </ul>
+                <h4>Cleanup, build, bug fixes &amp; documentation</h4>
+                <ul>
+                    <li>Use nasm as a default assembler and yasm as a fallback</li>
+                    <li>Fix performance regression for systems with multiple processor groups</li>
+                    <li>Enable building SvtAv1ApiTests and SvtAv1E2ETests for ARM</li>
+                    <li>Added variance boost documentation</li>
+                    <li>Added a mailmap file to map duplicate git generated emails to the appropriate author</li>
+                </ul>
+                <p><em>Thanks for using SVT-AV1-PSY!</em> ♥️</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.1.0">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.1.0</a></p>
+            </div>
+        </section>
+
+        <section id="v2.0.0-A" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.0.0-A</h2>
+                <p>Hi there! We're back with a new micro-release format to announce some exciting changes in <strong>SVT-AV1-PSY v2.0.0-A</strong>! 🎉</p>
+                <h3>PSY Updates</h3>
+                <h4>Features</h4>
+                <ul>
+                    <li>The CRF range, previously capped at 63, has been extended to a maximum value of 70. It can also be incremented in quarter increments of 0.25</li>
+                    <li>New option: <code>--enable-dlf 2</code> for a slower, more accurate deblocking loop filter</li>
+                    <li>New option: <code>--qp-scale-compress-strength</code> <em>(0 to 3)</em> which sets a strength for the QP scale algorithm to compress values across all temporal layers. Higher values result in more consistent video quality</li>
+                    <li>New option: <code>--frame-luma-bias</code> <em>(0 to 100)</em> enables experimental frame-level luma bias to improve quality in dark scenes by adjusting frame-level QP based on average luminance across each frame</li>
+                </ul>
+                <h4>Quality &amp; Performance</h4>
+                <ul>
+                    <li>A temporal layer chroma qindex offset has been added to Tune 3 for more consistent quality across frames when encoding</li>
+                    <li>Minor speed bump to Preset 8</li>
+                    <li>Encoder innovation:
+                    Dynamic delta_q_res switching implemented to help reduce signaling overhead, which should improve quality especially at CRF ≥40!</li>
+                    <li>Other general improvements to Tune 3</li>
+                </ul>
+                <h4>Documentation</h4>
+                <ul>
+                    <li>PNG images have been replaced with smaller lossless WebP images, resulting in faster loading &amp; repository cloning times.</li>
+                    <li>More consistent &amp; thorough <a href="https://github.com/gianni-rosato/svt-av1-psy/blob/master/Docs/PSY-Development.md">PSY Development page</a>, including build instructions</li>
+                </ul>
+                <h4>Bug Fixes</h4>
+                <ul>
+                    <li>Help menu formatting adjusted for less frequent underlining</li>
+                    <li><code>--progress 2</code> no longer reports the same information as <code>--progress 3</code></li>
+                </ul>
+                <h4>Other</h4>
+                <ul>
+                    <li>Introducing <strong>PSY Micro-releases</strong>! Each micro-release will be marked with a letter, bringing a bundle of new features &amp; improvements. The release letter will reset back to the initial <code>A</code> each time our mainline version is updated. More info can be found in this project's README &amp; the PSY Development page</li>
+                </ul>
+                <p><em>Thanks for using SVT-AV1-PSY!</em> ♥️</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.0.0-A">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.0.0-A</a></p>
+            </div>
+        </section>
+
+        <section id="v2.0.0" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.0.0</h2>
+                <p>Hello, everyone! We've been hard at work improving SVT-AV1 with our additions to the encoder improving visual fidelity. Little by little, we are working on trying to bring many of them to mainline! For the time being, I want to note that major SVT-AV1-PSY releases &amp; mainline releases are not the same, and the codebases differ due to our changes; the version numbers may be identical, but the versions themselves are not, which is disclosed within the encoder's version information.</p>
+                <p>With that, we're excited to announce <strong>SVT-AV1-PSY v2.0.0</strong>! 🎉</p>
+                <h3>PSY Updates</h3>
+                <h4>Variance boost</h4>
+                <ul>
+                    <li>Moved varboost delta-q adjusting code to happen before TPL, giving TPL the opportunity to work with more accurate superblock delta-q priors, and produce better final rdmult lambda values
+                        <ul>
+                            <li>Fixed rare cases of pulsing at high CRFs (&gt;=40) and strengths (3-4)</li>
+                            <li>2% avg. bitrate reduction for comparable image quality</li>
+                        </ul>
+                    </li>
+                    <li>Added an alternative boosting curve (<code>--enable-alt-curve</code>), with different variance/strength tradeoffs</li>
+                    <li>Refactored boost code so it internally works with native q-step ratios</li>
+                    <li>Removed legacy variance boosting method based on 64x64 values
+                        <ul>
+                            <li>Parameter <code>--new-variance-octile</code> -&gt; <code>--variance-octile</code></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><em>Excitingly, a var-boost mainline merge has been marked with the highest priority issue label by the mainline development team, so we may see this in mainline SVT-AV1 soon! Congrats @juliobbv!</em> 🎉</p>
+                <h4>Other</h4>
+                <ul>
+                    <li>Presets got faster, so in addition to Preset -2, we have an even slower Preset -3</li>
+                    <li><code>--sharpness</code> now accepts negative values</li>
+                    <li>The SVT-AV1-PSY encoder now supports Dolby Vision encoding via Dolby Vision RPUs. To build with Dolby Vision support, <a href="https://github.com/quietvoid/dovi_tool/blob/main/dolby_vision/README.md#building-the-library">install libdovi</a> &amp; pass <code>--enable-libdovi</code> to <code>./build.sh</code> on macOS/Linux (or <code>enable-libdovi</code> to <code>./build.bat</code> on Windows).</li>
+                </ul>
+                <h3>Mainline Updates</h3>
+                <h4>Major API updates</h4>
+                <ul>
+                    <li>Changed the API signaling the End Of Stream (EOS) with the last frame vs with an empty frame</li>
+                    <li><code>OPT_LD_LATENCY2</code> making the change above is kept in the code to help devs with integration</li>
+                    <li>The support of this API change has been <a href="https://github.com/FFmpeg/FFmpeg/commit/69dd1ce610fcffec453a0663c613c9b13165fd9e">merged</a> to ffmpeg with a 2.0 version check</li>
+                    <li>Removed the 3-pass VBR mode which changed the calling mechanism of multi-pass VBR</li>
+                    <li>Moved to a new versioning scheme where the project major version will be updated every time API/ABI is changed</li>
+                </ul>
+                <h4>Encoder</h4>
+                <ul>
+                    <li>Improve the tradeoffs for the random access mode across presets:</li>
+                    <li>Speedup presets MR by ~100% and improved quality along with tradeoff improvements across the higher quality presets (<a href="https://github.com/AOMediaCodec/SVT-AV1/-/merge_requests/2179">!2179</a>,<a href="https://github.com/AOMediaCodec/SVT-AV1/-/issues/2158">#2158</a>)</li>
+                    <li>Improved the compression efficiency of presets M9-M13 by 1-4% (<a href="https://github.com/AOMediaCodec/SVT-AV1/-/merge_requests/2179">!2179</a>)</li>
+                    <li>Simplified VBR multi-pass to use 2 passes to allow integration with ffmpeg</li>
+                    <li>Continued adding ARM optimizations for functions with <code>c_only</code> equivalent</li>
+                    <li>Replaced the 3-pass VBR with a 2-pass VBR to ease the multi-pass integration with ffmpeg</li>
+                    <li>Memory savings of 20-35% for LP 8 mode in preset M6 and below and 1-5% in other modes / presets</li>
+                    <li>Film grain table support via <code>--fgs-table</code> <em>(<a href="https://github.com/gianni-rosato/svt-av1-psy?tab=readme-ov-file#feature-additions">already in SVT-AV1-PSY</a>)</em> (<a href="https://gitlab.com/AOMediaCodec/SVT-AV1/-/commit/ae7ce1abc5f3f7913624f728ae123f8b8c1e30de">link</a>)</li>
+                    <li>Disable film grain denoise by default <em>(<a href="https://github.com/gianni-rosato/svt-av1-psy?tab=readme-ov-file#feature-additions">already in SVT-AV1-PSY</a>)</em> (<a href="https://gitlab.com/AOMediaCodec/SVT-AV1/-/commit/8b39b41df9e07bbcdbd19ea618762c5db3353c03">link</a>)</li>
+                </ul>
+                <h4>Cleanup, bug fixes &amp; documentation</h4>
+                <ul>
+                    <li>Various cleanups and functional bug fixes</li>
+                    <li>Update the documentation to reflect the rate control</li>
+                </ul>
+                <p><em>Thanks for using SVT-AV1-PSY!</em> ♥️</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.0.0">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.0.0</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
