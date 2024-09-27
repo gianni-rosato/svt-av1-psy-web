@@ -50,6 +50,43 @@
             </div>
         </section>
 
+        <section id="v2.2.1-A" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.2.1-A</h2>
+                <p>Our most significant PSY micro-release is here with <strong>SVT-AV1-PSY v2.2.1-A</strong>!!! 🏆</p>
+                <h3 id="psy-updates">PSY Updates</h3>
+                <h4 id="features">Features</h4>
+                <ul>
+                    <li>Encoding with <strong>odd (non-mod2) dimensions</strong> is now possible</li>
+                    <li>Encoding at <strong>resolutions lower than 64x64</strong> is now possible, down to as small as 4x4</li>
+                </ul>
+                <h4 id="quality-performance">Quality & Performance</h4>
+                <ul>
+                    <li>A new variance boost curve for Tune 4 has been introduced, optimized for still image encoding performance</li>
+                    <li>Improved color reproduction & overall picture quality in Tune 4 & Tune 2 through chroma qindex scaling (similar functionality is already present in Tune 3)</li>
+                    <li>Higher quality presets are available when encoding 16K</li>
+                    <li>Default <code>--chroma-qm-min</code> has been updated to 8 (from 0)</li>
+                </ul>
+                <h4 id="documentation">Documentation</h4>
+                <ul>
+                    <li>Updated Handbrake link to new, cross-platform Handbrake PSY builds</li>
+                </ul>
+                <h4 id="bug-fixes">Bug Fixes</h4>
+                <ul>
+                    <li>The version number should now be correct when building from an archive instead of cloning with git</li>
+                    <li>AVIFs with dimensions exceeding 4K resolution should decode correctly in applications that previously refused to decode these images when they were produced by SVT-AV1(-PSY)</li>
+                </ul>   
+                <h4 id="other">Other</h4>
+                <ul>
+                    <li>The <code>enable-libdovi</code> & <code>enable-libhdr10plus</code> flags in <code>build.sh</code> have been updated to <code>enable-dovi</code> & <code>enable-hdr10plus</code>. The old flags will still work, but are no longer documented & will be considered deprecated from this point forward.</li>
+                </ul>    
+                <h3 id="support-us">Support Us</h3>
+                <a href="/about/">See About Page</a> 
+                <p><em>Thanks for using SVT-AV1-PSY!</em> &lt;3</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.1-A">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.1-A</a></p>
+            </div>
+        </section>
+
         <section id="v2.2.1" class="section">
             <div class="section-text">
                 <h2>SVT-AV1-PSY v2.2.1</h2>
