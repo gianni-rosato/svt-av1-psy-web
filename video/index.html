@@ -83,6 +83,10 @@
                 <p>Controls how much the encoder smooths out differences between frames by controlling filtering strength on alternate reference frames. Increasing this makes the video less flickery but might blur fine details; decreasing it will increase detail retention, but setting it too low might have the opposite effect.</p>
                 <h3>Chroma Quantization Matrix Control</h3>
                 <p>Setting a custom QM minimum &amp; maximum for chroma in SVT-AV1-PSY gives you more control over color quality, allowing you to fine-tune how the color parts of the video are compressed separately from the brightness parts.</p>
+                <h3>Odd Dimensions</h3>
+                <p>SVT-AV1-PSY provides a meaningful improvement over mainline SVT-AV1 with its ability to encode video with odd horizontal &amp; vertical input resolutions. This is an incredibly convenient quality of life feature that we hope comes to mainline soon.</p>
+                <h3>Tiny Images</h3>
+                <p>Encoding images smaller than 64x64 pixels is possible with SVT-AV1-PSY, where it previously wasn't possible in mainline SVT-AV1. This is especially useful for AVIF encoding, as videos aren't often this small, but images can be.</p>
                 <h3>Better Defaults</h3>
                 <p>We've improved the defaults to automatically handle 10-bit video, disable film grain denoising, default to a different tuning for better quality, and more.</p>
                 <h3>Quality of Life</h3>
