@@ -44,6 +44,7 @@ body, html {
     padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .navbar a {
     margin: 0 1rem;
