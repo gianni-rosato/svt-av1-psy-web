@@ -115,6 +115,11 @@ body, html {
     margin-bottom: 2rem;
     align-items: start;
 }
+@media (max-width: 700px) {
+    .section {
+        flex-direction: column;
+    }
+}
 .section-text {
     flex: 1;
     padding-right: 2rem;
