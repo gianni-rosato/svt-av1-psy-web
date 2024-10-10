@@ -50,6 +50,39 @@
             </div>
         </section>
 
+        <section id="v2.2.1-B" class="section">
+            <div class="section-text">
+                <h2>SVT-AV1-PSY v2.2.1-B</h2>
+                <p>Our first ever <code>B</code> release is here with <strong>SVT-AV1-PSY v2.2.1-B</strong>! 🕺</p>
+                <h3>PSY Updates</h3>
+                <h4>Features</h4>
+                <ul>
+                    <li>New parameter <code>--noise-norm-strength</code> for controlling noise normalization. It is configurable with values 0 through 4, with a default value of 0. Noise normalization intelligently boosts higher frequency details in parts of the video where these details may otherwise be erased, helping preserve visual consistency in some scenarios.</li>
+                </ul>
+                    <h4>Quality & Performance</h4>
+                <ul>
+                    <li>Tune 4 variance boost scaling is now a bit flatter</li>
+                    <li>Adjusted Tune 4 lambda weights</li>
+                    <li>Limited the maximum available transform size available to Tune 4 to 32x32</li>
+                    <li>Adjusted the default sharpness parameter used by Tune 4</li>
+                    <li>New custom Variance Boost curve for Tune 4</li>
+                    <li>Ported speedups for AVX2 hardware from aomenc</li>
+                </ul>
+                <h3>Documentation</h3>
+                <ul>
+                    <li>DLF 2 option is now properly reflected in the help menu</li>
+                </ul>
+                <h4>Bug Fixes</h4>
+                <ul>
+                    <li>Fixed a bug where on certain devices under specific circumstances, encoding extremely small images resulted in a floating point exception</li>
+                </ul>
+                <h3 id="support-us">Support Us</h3>
+                <a href="/about/">See About Page</a> 
+                <p><em>Thanks for using SVT-AV1-PSY!</em> &lt;3</p>
+                <p><strong>Full Changelog</strong>: <a href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.1-B">https://github.com/gianni-rosato/svt-av1-psy/commits/v2.2.1-B</a></p>
+            </div>
+        </section>
+
         <section id="v2.2.1-A" class="section">
             <div class="section-text">
                 <h2>SVT-AV1-PSY v2.2.1-A</h2>
