@@ -9,7 +9,7 @@
     <title>SVT-AV1-PSY</title>
 </head>
 <body>
-    <script src="/static/js/imageSwitcher.js"></script>
+    <script src="/static/js/imageSwitcher.min.js"></script>
     <div class="navbar-container">
         <nav class="navbar">
             <a href="/">Home</a>
@@ -44,18 +44,7 @@
         </section>
 
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-            const images = [
-                '/static/images/avif-gb82.svg',
-                '/static/images/avif-cid22.svg'
-            ];
-            const subtitles = [
-                'Performance as a ratio of size to measured quality across the gb82 image dataset',
-                'Performance as a ratio of size to measured quality across the CID22 image dataset by Cloudinary'
-            ];
-            const args = ['GB82', 'CID22'];
-            new ImageSwitcher('image-switcher0', images, subtitles, args);
-        });
+        document.addEventListener('DOMContentLoaded',()=>{const images=['/static/images/avif-gb82.svg','/static/images/avif-cid22.svg'];const subtitles=['Performance as a ratio of size to measured quality across the gb82 image dataset','Performance as a ratio of size to measured quality across the CID22 image dataset by Cloudinary'];const args=['GB82','CID22'];new ImageSwitcher('image-switcher0',images,subtitles,args)});
         </script>
         <div class="centered-image">
             <div id="image-switcher0" class="image-container"></div>
@@ -70,38 +59,7 @@
         </section>
 
         <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = [
-                '/static/images/comparisons/water.jpg',
-                '/static/images/comparisons/water.avif',
-                '/static/images/comparisons/water.webp',
-                '/static/images/comparisons/water.jxl'
-            ];
-            const subtitles = [
-                'JPEG | 61.4 KB | SSIMU2 19.4',
-                'SVT-AV1-PSY AVIF | 61.6 KB | SSIMU2 36.2',
-                'WebP | 61.0 KB | SSIMU2 18.3',
-                'JPEG XL | 61.5 KB | SSIMU2 32.0'
-            ];
-            const args = ['JPEG', 'AVIF', 'WebP', 'JPEG XL'];
-            new ImageSwitcher('image-switcher1', images, subtitles, args);
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = [
-                '/static/images/comparisons/mc.jpg',
-                '/static/images/comparisons/mc.avif',
-                '/static/images/comparisons/mc.webp',
-                '/static/images/comparisons/mc.jxl'
-            ];
-            const subtitles = [
-                'JPEG | 74.9 KB | SSIMU2 45.5',
-                'SVT-AV1-PSY AVIF | 74.9 KB | SSIMU2 61.0',
-                'WebP | 75.5 KB | SSIMU2 50.2',
-                'JPEG XL | 75.0 KB | SSIMU2 54.1'
-            ];
-            const args = ['JPEG', 'AVIF', 'WebP', 'JPEG XL'];
-            new ImageSwitcher('image-switcher2', images, subtitles, args);
-        });
+        document.addEventListener('DOMContentLoaded',()=>{const images=['/static/images/comparisons/water.jpg','/static/images/comparisons/water.avif','/static/images/comparisons/water.webp','/static/images/comparisons/water.jxl'];const subtitles=['JPEG | 61.4 KB | SSIMU2 19.4','SVT-AV1-PSY AVIF | 61.6 KB | SSIMU2 36.2','WebP | 61.0 KB | SSIMU2 18.3','JPEG XL | 61.5 KB | SSIMU2 32.0'];const args=['JPEG','AVIF','WebP','JPEG XL'];new ImageSwitcher('image-switcher1',images,subtitles,args)});document.addEventListener('DOMContentLoaded',()=>{const images=['/static/images/comparisons/mc.jpg','/static/images/comparisons/mc.avif','/static/images/comparisons/mc.webp','/static/images/comparisons/mc.jxl'];const subtitles=['JPEG | 74.9 KB | SSIMU2 45.5','SVT-AV1-PSY AVIF | 74.9 KB | SSIMU2 61.0','WebP | 75.5 KB | SSIMU2 50.2','JPEG XL | 75.0 KB | SSIMU2 54.1'];const args=['JPEG','AVIF','WebP','JPEG XL'];new ImageSwitcher('image-switcher2',images,subtitles,args)});
         </script>
 
         <center><h3>Size Matched</h3></center>
