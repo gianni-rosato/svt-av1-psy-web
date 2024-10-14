@@ -1,5 +1,5 @@
 .button-container {
-	display: flex; 
+	display: flex;
 	justify-content: center;
 	margin-top: 20px;
 }
@@ -11,8 +11,8 @@
 	border-radius: 5px;
 	color: oklch(100% 0 0);
 	cursor: pointer;
-	margin: 0 10px;
-	padding: 10px 20px;
+	margin: 0 0.5rem;
+	padding: 0.5rem 1rem;
 	text-decoration: none;
 }
 .button:hover {

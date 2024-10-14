@@ -150,3 +150,12 @@ body, html {
     font-family: 'Apfel Grotezk', Arial, sans-serif;
     color: white;
 }
+#image-switcher {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+#image-switcher img {
+    max-width: 100%;
+    height: auto;
+}

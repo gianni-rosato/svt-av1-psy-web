@@ -9,6 +9,7 @@
     <title>SVT-AV1-PSY</title>
 </head>
 <body>
+    <script src="/static/js/imageSwitcher.js"></script>
     <div class="navbar-container">
         <nav class="navbar">
             <a href="/">Home</a>
@@ -33,7 +34,7 @@
         <section id="about" class="section">
             <div class="section-text">
                 <h2>Class-Leading Performance</h2>
-                <p>We've tuned our AVIF performance via industry-standard benchmarks for perceptual fidelity, such as SSIMULACRA2. However, we did not just stop at metric scores; there are always outliers in a metric's correlation with our vision, so SVT-AV1-PSY's AVIF results have undergone extensive visual inspection and additional tuning to ensure consistency is preserved in any source. </p>
+                <p>We've tuned our AVIF performance via industry-standard benchmarks for perceptual fidelity including SSIMULACRA2 (graphs below). However, we did not just stop at metric scores; there are always outliers in a metric's correlation with our vision, so SVT-AV1-PSY's AVIF results have undergone extensive visual inspection and additional tuning to ensure consistency is preserved in any source. </p>
             </div>
             <div class="section-image">
                 <picture>
@@ -41,29 +42,75 @@
                 </picture>
             </div>
         </section>
-        <div class="image-container">
-            <picture>
-                <img src="/static/images/avif-gb82.svg" width="663" height="496" loading="lazy" alt="gb82 Dataset - AVIF Performance">
-            </picture>
-            <p class="image-caption">Performance as a ratio of size to measured quality across the gb82 image dataset</p>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const images = [
+                '/static/images/avif-gb82.svg',
+                '/static/images/avif-cid22.svg'
+            ];
+            const subtitles = [
+                'Performance as a ratio of size to measured quality across the gb82 image dataset',
+                'Performance as a ratio of size to measured quality across the CID22 image dataset by Cloudinary'
+            ];
+            const args = ['GB82', 'CID22'];
+            new ImageSwitcher('image-switcher0', images, subtitles, args);
+        });
+        </script>
+        <div class="centered-image">
+            <div id="image-switcher0" class="image-container"></div>
         </div>
-        <div class="image-container">
-            <picture>
-                <img src="/static/images/avif-cid22.svg" width="663" height="496" loading="lazy" alt="gb82 Dataset - AVIF Performance">
-            </picture>
-            <p class="image-caption">Performance as a ratio of size to measured quality across the CID22 image dataset by Cloudinary</p>
-        </div>
-        <section class="section">
+
+        <section id="about" class="section">
             <div class="section-text">
                 <h2>Visual Comparisons</h2>
-                <p>Stay tuned - these are coming soon!</p>
-            </div>
-            <div class="section-image">
-                <picture>
-
-                </picture>
+                <p>Visual comparisons between codecs are difficult. Images can be cherry-picked to flaunt a particular encoder's strengths, visual preferences differ across human beings, and metrics often don't tell a complete story when used as the basis for making fidelity matched comparisons. You have been warned that this section is rather unscientific, but we've tried our best to create fair comparisons here in the low to medium fidelity range to make differences easily visually distinguishable.</p>
+                <p>⚠️ <strong>JPEG XL</strong>:  If you aren't using a browser that supports JPEG XL, the JXL images in these comparisons won't display. We would recommend using a browser supporting JXL for viewing these comparisons adequately; some examples are <a href="https://thorium.rocks" target="_blank">Thorium</a>, <a href="https://www.waterfox.net" target="_blank">Waterfox</a>, & <a href="https://www.apple.com/safari" target="_blank">Safari</a>.</p>
             </div>
         </section>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = [
+                '/static/images/comparisons/water.jpg',
+                '/static/images/comparisons/water.avif',
+                '/static/images/comparisons/water.webp',
+                '/static/images/comparisons/water.jxl'
+            ];
+            const subtitles = [
+                'JPEG | 61.4 KB | SSIMU2 19.4',
+                'SVT-AV1-PSY AVIF | 61.6 KB | SSIMU2 36.2',
+                'WebP | 61.0 KB | SSIMU2 18.3',
+                'JPEG XL | 61.5 KB | SSIMU2 32.0'
+            ];
+            const args = ['JPEG', 'AVIF', 'WebP', 'JPEG XL'];
+            new ImageSwitcher('image-switcher1', images, subtitles, args);
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = [
+                '/static/images/comparisons/mc.jpg',
+                '/static/images/comparisons/mc.avif',
+                '/static/images/comparisons/mc.webp',
+                '/static/images/comparisons/mc.jxl'
+            ];
+            const subtitles = [
+                'JPEG | 74.9 KB | SSIMU2 45.5',
+                'SVT-AV1-PSY AVIF | 74.9 KB | SSIMU2 61.0',
+                'WebP | 75.5 KB | SSIMU2 50.2',
+                'JPEG XL | 75.0 KB | SSIMU2 54.1'
+            ];
+            const args = ['JPEG', 'AVIF', 'WebP', 'JPEG XL'];
+            new ImageSwitcher('image-switcher2', images, subtitles, args);
+        });
+        </script>
+
+        <center><h3>Size Matched</h3></center>
+        <div id="image-switcher1" class="image-container"></div>
+        <div id="image-switcher2" class="image-container"></div>
+
+        <center><h3>Fidelity Matched</h3></center>
+        <center><p><em>Coming Soon!</em></p></center>
+
         <section class="section">
             <div class="section-text">
                 <h2>Methodology</h2>
