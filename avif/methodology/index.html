@@ -46,7 +46,7 @@
         <section id="configuration" class="section">
             <div class="section-text">
                 <h2>Configuration</h2>
-                <p>For our testing, we used a <a href="https://github.com/gianni-rosato/libavif">fork of libavif</a> properly supporting SVT-AV1-PSY and aom-av1-psy101. The encode settings used for each encoder are as follows:</p>
+                <p>For our testing, we used a <a href="https://github.com/gianni-rosato/libavif">fork of libavif</a> properly supporting SVT-AV1-PSY and aom-av1-psy101. Our comparisons are up to date as of 21 October 2024 when benchmarking was performed on SVT-AV1-PSY commit <code>ca7c032</code>. The encode settings used for each encoder are as follows:</p>
                 <p>
                     <li><strong>SVT-AV1-PSY</strong>:
                         <code>avifenc -s 4 -c svt -y 420 -d 10 -a crf=XX -a lp=5 -a tune=4 input -o output.avif</code></li>
