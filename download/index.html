@@ -32,84 +32,45 @@
     </header>
 
     <main class="content">
-      <section id="about" class="section">
-        <div class="section-text">
-          <h2>Using SVT-AV1-PSY</h2>
-          <p>
-            While we distribute raw binaries through our GitHub releases, there
-            are a couple of other ways to use SVT-AV1-PSY that may be more
-            convenient if you aren't familiar with the command line and would
-            just like to encode videos:
-            <ul>
-              <li>
-                <a href="https://flathub.org/apps/net.natesales.Aviator"
-                >Aviator (Linux)</a>: Aviator is designed to be a no-frills,
-                easy-to-use AV1 encoding GUI that any beginner can pick up and
-                immediately understand how to use. It is powered by SVT-AV1-PSY,
-                and is available as a Flatpak on Linux.
-              </li>
-              <li>
-                <a href="https://github.com/staxrip/staxrip"
-                >StaxRip (Windows)</a>: StaxRip is a powerful video and audio
-                encoding GUI for intermediate to advanced users. Its AV1
-                encoding features are enabled by SVT-AV1-PSY, and it is
-                available on Windows
-              </li>
-              <li>
-                <a href="https://github.com/porcino/Av1ador"
-                >Av1ador (Windows)</a>: Av1ador is an AV1/HEVC/VP9/H.264
-                parallel encoder GUI for FFmpeg with preview/comparison while
-                transcoding. Its AV1 encoding features are enabled by
-                SVT-AV1-PSY, and it is available on Windows
-              </li>
-              <li>
-                <a href="https://github.com/Nj0be/HandBrake-SVT-AV1-PSY"
-                >Handbrake Fork (multi-platform)</a>: Handbrake is a popular
-                video encoding GUI that is available across Windows, macOS, and
-                Linux. This fork of Handbrake adds SVT-AV1-PSY support to the
-                application.
-              </li>
-              <li>
-                AUR: SVT-AV1-PSY is available in the AUR on Arch Linux as <code
-                >svt-av1-psy-git</code>.
-              </li>
-            </ul>
-          </p>
-          <p>
-            For more info on getting started with AV1, you can see <a
-              href="https://wiki.x266.mov/blog/av1-for-dummies"
-            >this blog post</a> on the Codec Wiki. If you'd like to acquire the
-            standalone SvtAv1EncApp binary archives, please see the download
-            buttons below.
-          </p>
+        <section id="about" class="section">
+            <div class="section-text">
+                <h2>Using SVT-AV1-PSY</h2>
+                <p>While we distribute raw binaries through our GitHub releases, there are a couple of other ways to use SVT-AV1-PSY that may be more convenient if you aren't familiar with the command line and would just like to encode videos:
+                    <ul>
+                        <li>
+                            <a href="https://flathub.org/apps/net.natesales.Aviator">Aviator (Linux)</a>: Aviator is designed to be a no-frills, easy-to-use AV1 encoding GUI that any beginner can pick up and immediately understand how to use. It is powered by SVT-AV1-PSY, and is available as a Flatpak on Linux.
+                        </li>
+                        <li>
+                            <a href="https://github.com/staxrip/staxrip">StaxRip (Windows)</a>: StaxRip is a powerful video and audio encoding GUI for intermediate to advanced users. Its AV1 encoding features are enabled by SVT-AV1-PSY, and it is available on Windows
+                        </li>
+                        <li>
+                            <a href="https://github.com/porcino/Av1ador">Av1ador (Windows)</a>: Av1ador is an AV1/HEVC/VP9/H.264 parallel encoder GUI for FFmpeg with preview/comparison while transcoding. Its AV1 encoding features are enabled by SVT-AV1-PSY, and it is available on Windows
+                        </li>
+                        <li>
+                            <a href="https://github.com/Nj0be/HandBrake-SVT-AV1-PSY">Handbrake Fork (multi-platform)</a>: Handbrake is a popular video encoding GUI that is available across Windows, macOS, and Linux. This fork of Handbrake adds SVT-AV1-PSY support to the application.
+                        </li>
+                        <li>
+                            AUR: SVT-AV1-PSY is available in the AUR on Arch Linux as <code>svt-av1-psy-git</code>.
+                        </li>
+                        <li>
+                            Brew: SVT-AV1-PSY is available via Homebrew on macOS. You can install it by running <code>brew install gianni-rosato/svt-av1-psy/svt-av1-psy</code>.
+                        </li>
+                    </ul>
+                </p>
+                <p>For more info on getting started with AV1, you can see <a href="https://wiki.x266.mov/blog/av1-for-dummies">this blog post</a> on the Codec Wiki. If you'd like to acquire the standalone SvtAv1EncApp binary archives, please see the download buttons below.</p>
+            </div>
+            <div class="section-image">
+                <picture>
+                    <source srcset="/static/images/aviator_video.jxl" type="image/jxl">
+                    <img src="/static/images/aviator_video.webp" alt="Aviator Preview">
+                </picture>
+            </div>
+        </section>
+        <div class="button-container">
+            <a href="https://github.com/gianni-rosato/svt-av1-psy/releases/download/v2.2.1-B/SvtAv1EncApp-Linux-x86_64.tzst" class="button">Linux</a>
+            <a href="https://github.com/gianni-rosato/svt-av1-psy/releases/download/v2.2.1-B/SvtAv1EncApp-macOS-AArch64.txz" class="button">macOS</a>
+            <a href="https://github.com/gianni-rosato/svt-av1-psy/discussions/79" class="button">Other (Community)</a>
         </div>
-        <div class="section-image">
-          <picture>
-            <source
-              srcset="/static/images/aviator_video.jxl"
-              type="image/jxl"
-            />
-            <img
-              src="/static/images/aviator_video.webp"
-              alt="Aviator Preview"
-            />
-          </picture>
-        </div>
-      </section>
-      <div class="button-container">
-        <a
-          href="https://github.com/gianni-rosato/svt-av1-psy/releases/download/v2.3.0/SvtAv1EncApp-Linux-x86_64.tzst"
-          class="button"
-        >Linux</a>
-        <a
-          href="https://github.com/gianni-rosato/svt-av1-psy/releases/download/v2.3.0/SvtAv1EncApp-macOS-AArch64.txz"
-          class="button"
-        >macOS</a>
-        <a
-          href="https://github.com/gianni-rosato/svt-av1-psy/discussions/88"
-          class="button"
-        >Other (Community)</a>
-      </div>
     </main>
   </body>
 </html>
