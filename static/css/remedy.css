@@ -9,7 +9,6 @@ note: |
 category: file
 */
 
-
 /* @docs
 label: Box Sizing
 
@@ -18,8 +17,9 @@ note: |
 
 category: global
 */
-*, ::before, ::after { box-sizing: border-box; }
-
+*, ::before, ::after {
+  box-sizing: border-box;
+}
 
 /* @docs
 label: Line Sizing
@@ -33,8 +33,9 @@ links:
 
 category: global
 */
-html { line-sizing: normal; }
-
+html {
+  line-sizing: normal;
+}
 
 /* @docs
 label: Body Margins
@@ -44,8 +45,9 @@ note: |
 
 category: global
 */
-body { margin: 0; }
-
+body {
+  margin: 0;
+}
 
 /* @docs
 label: Hidden Attribute
@@ -55,8 +57,9 @@ note: |
 
   category: global
 */
-[hidden] { display: none; }
-
+[hidden] {
+  display: none;
+}
 
 /* @docs
 label: Heading Sizes
@@ -66,13 +69,24 @@ note: |
 
 category: typography
 */
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.17rem; }
-h4 { font-size: 1.00rem; }
-h5 { font-size: 0.83rem; }
-h6 { font-size: 0.67rem; }
-
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1.00rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.67rem;
+}
 
 /* @docs
 label: H1 Margins
@@ -82,8 +96,9 @@ note: |
 
 category: typography
 */
-h1 { margin: 0.67em 0; }
-
+h1 {
+  margin: 0.67em 0;
+}
 
 /* @docs
 label: Pre Wrapping
@@ -93,8 +108,9 @@ note: |
 
 category: typography
 */
-pre { white-space: pre-wrap; }
-
+pre {
+  white-space: pre-wrap;
+}
 
 /* @docs
 label: Horizontal Rule
@@ -114,7 +130,6 @@ hr {
   overflow: visible;
 }
 
-
 /* @docs
 label: Responsive Embeds
 
@@ -133,7 +148,6 @@ category: embedded elements
 }
 audio:not([controls]) { display:none; } */
 
-
 /* @docs
 label: Responsive Images
 
@@ -147,9 +161,12 @@ note: |
 
 category: embedded elements
 */
-picture { display: contents; }
-source { display: none; }
-
+picture {
+  display: contents;
+}
+source {
+  display: none;
+}
 
 /* @docs
 label: Aspect Ratios
@@ -166,7 +183,6 @@ img, svg, video, canvas {
   height: auto;
 }
 
-
 /* @docs
 label: Audio Width
 
@@ -176,7 +192,9 @@ note: |
 
 category: embedded elements
 */
-audio { width: 100%; }
+audio {
+  width: 100%;
+}
 
 /* @docs
 label: Image Borders
@@ -186,8 +204,9 @@ note: |
 
 category: legacy browsers
 */
-img { border-style: none; }
-
+img {
+  border-style: none;
+}
 
 /* @docs
 label: SVG Overflow
@@ -197,8 +216,9 @@ note: |
 
 category: legacy browsers
 */
-svg { overflow: hidden; }
-
+svg {
+  overflow: hidden;
+}
 
 /* @docs
 label: HTML5 Elements
@@ -212,10 +232,19 @@ links:
 
 category: legacy browsers
 */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block;
 }
-
 
 /* @docs
 label: Checkbox & Radio Inputs
@@ -226,8 +255,8 @@ note: |
 
 category: legacy browsers
 */
-[type='checkbox'],
-[type='radio'] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }

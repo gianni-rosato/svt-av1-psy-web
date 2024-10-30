@@ -1,93 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <base target="_self">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/css/main.css" rel="stylesheet">
-    <link href="/static/css/remedy.css" rel="stylesheet">
-    <link href="/static/css/code.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <base target="_self" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/static/css/main.css" rel="stylesheet" />
+    <link href="/static/css/remedy.css" rel="stylesheet" />
+    <link href="/static/css/code.css" rel="stylesheet" />
     <title>SVT-AV1-PSY</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="navbar-container">
-        <nav class="navbar">
-            <a href="/">Home</a>
-            <a href="/about/">About</a>
-            <a href="/video/">Video</a>
-            <a href="/avif/">AVIF</a>
-            <a href="/releases/">Releases</a>
-            <a href="/download/">Download</a>
-        </nav>
+      <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/video/">Video</a>
+        <a href="/avif/">AVIF</a>
+        <a href="/releases/">Releases</a>
+        <a href="/download/">Download</a>
+      </nav>
     </div>
 
     <header class="banner">
-        <picture>
-            <img src="/static/images/methodology_banner.avif" alt="AVIF Banner">
-        </picture>
-        <div class="banner-content">
-            <h1>Methodology</h1>
-        </div>
+      <picture>
+        <img src="/static/images/methodology_banner.avif" alt="AVIF Banner" />
+      </picture>
+      <div class="banner-content">
+        <h1>Methodology</h1>
+      </div>
     </header>
 
     <main class="content">
-        <section id="approach" class="section">
-            <div class="section-text">
-                <h2>Approach</h2>
-                <p>We believe transparency &amp; fairness are key in making lossy compression comparisons. In comparing SVT-AV1-PSY to other image compression algorithms, we strived to ensure each encoder was represented according its best-scoring implementation. We consulted with the developer of a perceptual fidelity-focused aomenc fork called <a href="https://wiki.x266.mov/docs/encoders/aom-psy101">aom-av1-psy101</a> to benchmark aomenc at its maximum efficiency. We allowed cjxl to use the maximum effort level available, despite this causing it to encode significantly slower than the other encoders we tested. We also gave aomenc a speed advantage over our encoder. For JPEG, we used the best JPEG encoder available for perceptual fidelity, Google's <a href="https://opensource.googleblog.com/2024/04/introducing-jpegli-new-jpeg-coding-library.html">jpegli</a>.</p>
-            </div>
-            <div class="section-image">
-                <picture>
-                    <img src="/static/images/city_thumb.avif" loading="lazy" width=300 height=200 alt="City (Boston)">
-                </picture>
-            </div>
-        </section>
+      <section id="approach" class="section">
+        <div class="section-text">
+          <h2>Approach</h2>
+          <p>
+            We believe transparency &amp; fairness are key in making lossy
+            compression comparisons. In comparing SVT-AV1-PSY to other image
+            compression algorithms, we strived to ensure each encoder was
+            represented according its best-scoring implementation. We consulted
+            with the developer of a perceptual fidelity-focused aomenc fork
+            called <a href="https://wiki.x266.mov/docs/encoders/aom-psy101"
+            >aom-av1-psy101</a> to benchmark aomenc at its maximum efficiency.
+            We allowed cjxl to use the maximum effort level available, despite
+            this causing it to encode significantly slower than the other
+            encoders we tested. We also gave aomenc a speed advantage over our
+            encoder. For JPEG, we used the best JPEG encoder available for
+            perceptual fidelity, Google's <a
+              href="https://opensource.googleblog.com/2024/04/introducing-jpegli-new-jpeg-coding-library.html"
+            >jpegli</a>.
+          </p>
+        </div>
+        <div class="section-image">
+          <picture>
+            <img
+              src="/static/images/city_thumb.avif"
+              loading="lazy"
+              width="300"
+              height="200"
+              alt="City (Boston)"
+            />
+          </picture>
+        </div>
+      </section>
 
-        <section id="configuration" class="section">
-            <div class="section-text">
-                <h2>Configuration</h2>
-                <p>For our testing, we used a <a href="https://github.com/gianni-rosato/libavif">fork of libavif</a> properly supporting SVT-AV1-PSY and aom-av1-psy101. Our comparisons are up to date as of 21 October 2024 when benchmarking was performed on SVT-AV1-PSY commit <code>ca7c032</code>. The encode settings used for each encoder are as follows:</p>
-                <p>
-                    <li><strong>SVT-AV1-PSY</strong>:
-                        <code>avifenc -s 4 -c svt -y 420 -d 10 -a crf=XX -a lp=5 -a tune=4 input -o output.avif</code></li>
-                    <li><strong>aomenc</strong>:
-                        <code>avifenc -j 8 -d 10 -y 444 -s 4 --min 0 --max 63 --minalpha 0 --maxalpha 63 -a end-usage=q -a cq-level=XX -a tune=ssim -a quant-b-adapt=1 -a deltaq-mode=2 -a sb-size=64 -a sharpness=1 input -o output.avif</code></li>
-                    <li><strong>cjxl</strong>:
-                        <code>cjxl input output.jxl -q XX -e 10</code></li>
-                    <li><strong>cjpegli</strong>:
-                        <code>cjpegli input output.jpg -q XX -p 2</code></li>
-                </p>
-                <p>If you'd like more information, you can see <a href="https://rentry.co/full_bench_avif">our script</a> that we use to plot efficiency for each encoder.</p>
-            </div>
-        </section>
+      <section id="configuration" class="section">
+        <div class="section-text">
+          <h2>Configuration</h2>
+          <p>
+            For our testing, we used a <a
+              href="https://github.com/gianni-rosato/libavif"
+            >fork of libavif</a> properly supporting SVT-AV1-PSY and
+            aom-av1-psy101. Our comparisons are up to date as of 21 October 2024
+            when benchmarking was performed on SVT-AV1-PSY commit <code
+            >ca7c032</code>. The encode settings used for each encoder are as
+            follows:
+          </p>
+          <p>
+            <li>
+              <strong>SVT-AV1-PSY</strong>:
+              <code>avifenc -s 4 -c svt -y 420 -d 10 -a crf=XX -a lp=5 -a tune=4
+                input -o output.avif</code>
+            </li>
+            <li>
+              <strong>aomenc</strong>:
+              <code>avifenc -j 8 -d 10 -y 444 -s 4 --min 0 --max 63 --minalpha 0
+                --maxalpha 63 -a end-usage=q -a cq-level=XX -a tune=ssim -a
+                quant-b-adapt=1 -a deltaq-mode=2 -a sb-size=64 -a sharpness=1
+                input -o output.avif</code>
+            </li>
+            <li>
+              <strong>cjxl</strong>:
+              <code>cjxl input output.jxl -q XX -e 10</code>
+            </li>
+            <li>
+              <strong>cjpegli</strong>:
+              <code>cjpegli input output.jpg -q XX -p 2</code>
+            </li>
+          </p>
+          <p>
+            If you'd like more information, you can see <a
+              href="https://rentry.co/full_bench_avif"
+            >our script</a> that we use to plot efficiency for each encoder.
+          </p>
+        </div>
+      </section>
 
-        <section id="datasets" class="section">
-            <div class="section-text">
-                <h2>Datasets</h2>
-                <p>In order to provide valuable compression efficiency numbers for a wide variety of different image content, we hand-picked two compelling datasets for our testing.</p>
-                <p>
-                    <li><strong>CID22 Validation Set</strong>:
-                        The reference images in Cloudinary's <a href="https://cloudinary.com/labs/cid22">validation dataset</a> were used as our primary resource during testing. It is a subset of the Cloudinary Image Dataset '22 (CID22) which is described as "... a large image quality assessment (IQA) dataset created in 2022, consisting of 22k annotated images based on 250 pristine images ..." (Cloudinary, 2022).</li>
-                    <li><strong>gb82 Dataset</strong>:
-                        The gb82 Dataset (<a href="https://files.catbox.moe/y56ho3.tzst">direct download</a>) was used to validate our results on a dataset consisting entirely of photographic content. 25 photographic images were hand-picked to represent a breadth of photographic content to ensure encoders cannot overfit by only minimizing certain classes of artifacts.</li>
-                    <li><strong>Daala subset1</strong></li>:
-                        The <a href="https://github.com/WyohKnott/image-formats-comparison">Daala subset1</a> dataset contains a variety of larger photographic images, and was used to validate our results on a dataset representative of higher-quality photographic content that one might serve on a webpage.
-                    </p>
-                <p>The graphs presented on the AVIF page are real charts generated from these two datasets based on the encoding settings we provided in the section above.</p>
-            </div>
-        </section>
+      <section id="datasets" class="section">
+        <div class="section-text">
+          <h2>Datasets</h2>
+          <p>
+            In order to provide valuable compression efficiency numbers for a
+            wide variety of different image content, we hand-picked two
+            compelling datasets for our testing.
+          </p>
+          <p>
+            <li>
+              <strong>CID22 Validation Set</strong>: The reference images in
+              Cloudinary's <a href="https://cloudinary.com/labs/cid22"
+              >validation dataset</a> were used as our primary resource during
+              testing. It is a subset of the Cloudinary Image Dataset '22
+              (CID22) which is described as "... a large image quality
+              assessment (IQA) dataset created in 2022, consisting of 22k
+              annotated images based on 250 pristine images ..." (Cloudinary,
+              2022).
+            </li>
+            <li>
+              <strong>gb82 Dataset</strong>: The gb82 Dataset (<a
+                href="https://files.catbox.moe/y56ho3.tzst"
+              >direct download</a>) was used to validate our results on a
+              dataset consisting entirely of photographic content. 25
+              photographic images were hand-picked to represent a breadth of
+              photographic content to ensure encoders cannot overfit by only
+              minimizing certain classes of artifacts.
+            </li>
+            <li><strong>Daala subset1</strong></li>: The <a
+              href="https://github.com/WyohKnott/image-formats-comparison"
+            >Daala subset1</a> dataset contains a variety of larger photographic
+            images, and was used to validate our results on a dataset
+            representative of higher-quality photographic content that one might
+            serve on a webpage.
+          </p>
+          <p>
+            The graphs presented on the AVIF page are real charts generated from
+            these two datasets based on the encoding settings we provided in the
+            section above.
+          </p>
+        </div>
+      </section>
 
-        <section class="section">
-            <div class="section-text">
-                <h2>Visual Comparisons</h2>
-                <p>Stay tuned - these are coming soon!</p>
-            </div>
-            <div class="section-image">
-                <picture>
-
-                </picture>
-            </div>
-        </section>
+      <section class="section">
+        <div class="section-text">
+          <h2>Visual Comparisons</h2>
+          <p>Stay tuned - these are coming soon!</p>
+        </div>
+        <div class="section-image">
+          <picture></picture>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>

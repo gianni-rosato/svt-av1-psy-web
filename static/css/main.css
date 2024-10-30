@@ -1,161 +1,161 @@
 @font-face {
-    font-family: 'Apfel Grotezk';
-    src: url('/static/fonts/ApfelGrotezk-Regular.woff2') format("woff2");
-    font-weight: unset;
-    font-style: normal;
+  font-family: "Apfel Grotezk";
+  src: url("/static/fonts/ApfelGrotezk-Regular.woff2") format("woff2");
+  font-weight: unset;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Mattone';
-    src: url('/static/fonts/Mattone-Bold.woff2') format("woff2");
-    font-weight: unset;
-    font-style: normal;
+  font-family: "Mattone";
+  src: url("/static/fonts/Mattone-Bold.woff2") format("woff2");
+  font-weight: unset;
+  font-style: normal;
 }
 a {
-    font-size: 1.2rem;
-    text-decoration: underline;
-    color: oklch(88.52% 0.2002 194.77);
+  font-size: 1.2rem;
+  text-decoration: underline;
+  color: oklch(88.52% 0.2002 194.77);
 }
 li {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 body, html {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    font-family: 'Apfel Grotezk', Arial, sans-serif;
-    line-height: 1.6;
-    color: white;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Apfel Grotezk", Arial, sans-serif;
+  line-height: 1.6;
+  color: white;
 }
 .navbar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
 }
 .navbar {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 50px;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .navbar a {
-    margin: 0 1rem;
-    text-decoration: none;
-    color: whitesmoke;
-    font-family: 'Apfel Grotezk', Arial, sans-serif;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: "Apfel Grotezk", Arial, sans-serif;
 }
 .navbar a:hover {
-    color: oklch(88.52% 0.2002 194.77);
-    cursor: pointer;
+  color: oklch(88.52% 0.2002 194.77);
+  cursor: pointer;
 }
 .banner {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
 }
 .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .banner-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
 }
 .banner-content h1 {
-    color: white;
-    font-size: 4rem;
-    font-family: 'Mattone';
-    text-shadow: 2px 2px 4px oklch(70.59% 0.1621 194);
-    line-height: 1;
+  color: white;
+  font-size: 4rem;
+  font-family: "Mattone";
+  text-shadow: 2px 2px 4px oklch(70.59% 0.1621 194);
+  line-height: 1;
 }
 .content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 .content h2 {
-    font-size: 1.5rem;
-    font-family: 'Mattone';
-    text-shadow: 1px 1px 2px oklch(70.59% 0.1621 194);
-    line-height: 1.6;
+  font-size: 1.5rem;
+  font-family: "Mattone";
+  text-shadow: 1px 1px 2px oklch(70.59% 0.1621 194);
+  line-height: 1.6;
 }
 .content h3 {
-    font-size: 1.25rem;
-    font-family: 'Mattone';
-    line-height: 1.4;
+  font-size: 1.25rem;
+  font-family: "Mattone";
+  line-height: 1.4;
 }
 .content h4 {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: bold;
 }
 .content p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 .section {
-    display: flex;
-    margin-bottom: 2rem;
-    align-items: start;
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: start;
 }
 @media (max-width: 700px) {
-    .section {
-        flex-direction: column;
-    }
+  .section {
+    flex-direction: column;
+  }
 }
 .section-text {
-    flex: 1;
-    padding-right: 2rem;
+  flex: 1;
+  padding-right: 2rem;
 }
 .section-image {
-    flex: 0 0 300px;
+  flex: 0 0 300px;
 }
 .section-image img {
-    border-radius: 8px;
-    width: 100%;
-    height: auto;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
 }
 .centered-image {
-    display: block;
-    max-width: 600px;
-    width: 100%;
-    height: auto;
-    margin: 2rem auto;
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 2rem auto;
 }
 .image-container {
-    text-align: center;
-    margin: 2rem 0;
+  text-align: center;
+  margin: 2rem 0;
 }
 .image-caption {
-    margin-top: 0.5rem;
-    font-style: italic;
-    font-family: 'Apfel Grotezk', Arial, sans-serif;
-    color: white;
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-family: "Apfel Grotezk", Arial, sans-serif;
+  color: white;
 }
 #image-switcher {
-    max-width: 800px;
-    margin: 2rem auto;
+  max-width: 800px;
+  margin: 2rem auto;
 }
 
 #image-switcher img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }

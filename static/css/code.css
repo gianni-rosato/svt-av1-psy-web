@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'Monaspace Krypton';
-    src: url('/static/fonts/Monaspace-Krypton.woff2') format("woff2");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Monaspace Krypton";
+  src: url("/static/fonts/Monaspace-Krypton.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 code {
-    font-family: 'Monaspace Krypton', monospace;
-    font-size: 1.1rem;
-    background-color: oklch(20% 0 0);
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
+  font-family: "Monaspace Krypton", monospace;
+  font-size: 1.1rem;
+  background-color: oklch(20% 0 0);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
