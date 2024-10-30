@@ -77,26 +77,28 @@
             follows:
           </p>
           <p>
-            <li>
-              <strong>SVT-AV1-PSY</strong>:
-              <code>avifenc -s 4 -c svt -y 420 -d 10 -a crf=XX -a lp=5 -a tune=4
-                input -o output.avif</code>
-            </li>
-            <li>
-              <strong>aomenc</strong>:
-              <code>avifenc -j 8 -d 10 -y 444 -s 4 --min 0 --max 63 --minalpha 0
-                --maxalpha 63 -a end-usage=q -a cq-level=XX -a tune=ssim -a
-                quant-b-adapt=1 -a deltaq-mode=2 -a sb-size=64 -a sharpness=1
-                input -o output.avif</code>
-            </li>
-            <li>
-              <strong>cjxl</strong>:
-              <code>cjxl input output.jxl -q XX -e 10</code>
-            </li>
-            <li>
-              <strong>cjpegli</strong>:
-              <code>cjpegli input output.jpg -q XX -p 2</code>
-            </li>
+            <ul>
+              <li>
+                <strong>SVT-AV1-PSY</strong>:
+                <code>avifenc -s 4 -c svt -y 420 -d 10 -a crf=XX -a lp=5 -a
+                  tune=4 input -o output.avif</code>
+              </li>
+              <li>
+                <strong>aomenc</strong>:
+                <code>avifenc -j 8 -d 10 -y 444 -s 4 --min 0 --max 63 --minalpha
+                  0 --maxalpha 63 -a end-usage=q -a cq-level=XX -a tune=ssim -a
+                  quant-b-adapt=1 -a deltaq-mode=2 -a sb-size=64 -a sharpness=1
+                  input -o output.avif</code>
+              </li>
+              <li>
+                <strong>cjxl</strong>:
+                <code>cjxl input output.jxl -q XX -e 10</code>
+              </li>
+              <li>
+                <strong>cjpegli</strong>:
+                <code>cjpegli input output.jpg -q XX -p 2</code>
+              </li>
+            </ul>
           </p>
           <p>
             If you'd like more information, you can see <a
@@ -115,33 +117,35 @@
             compelling datasets for our testing.
           </p>
           <p>
-            <li>
-              <strong>CID22 Validation Set</strong>: The reference images in
-              Cloudinary's <a href="https://cloudinary.com/labs/cid22"
-              >validation dataset</a> were used as our primary resource during
-              testing. It is a subset of the Cloudinary Image Dataset '22
-              (CID22) which is described as "... a large image quality
-              assessment (IQA) dataset created in 2022, consisting of 22k
-              annotated images based on 250 pristine images ..." (Cloudinary,
-              2022).
-            </li>
-            <li>
-              <strong>gb82 Dataset</strong>: The gb82 Dataset (<a
-                href="https://files.catbox.moe/y56ho3.tzst"
-              >direct download</a>) was used to validate our results on a
-              dataset consisting entirely of photographic content. 25
-              photographic images were hand-picked to represent a breadth of
-              photographic content to ensure encoders cannot overfit by only
-              minimizing certain classes of artifacts.
-            </li>
-            <li>
-              <strong>Daala subset1</strong>: The <a
-                href="https://github.com/WyohKnott/image-formats-comparison"
-              >Daala subset1</a> dataset contains a variety of larger
-              photographic images, and was used to validate our results on a
-              dataset representative of higher-quality photographic content that
-              one might serve on a webpage.
-            </li>
+            <ul>
+              <li>
+                <strong>CID22 Validation Set</strong>: The reference images in
+                Cloudinary's <a href="https://cloudinary.com/labs/cid22"
+                >validation dataset</a> were used as our primary resource during
+                testing. It is a subset of the Cloudinary Image Dataset '22
+                (CID22) which is described as "... a large image quality
+                assessment (IQA) dataset created in 2022, consisting of 22k
+                annotated images based on 250 pristine images ..." (Cloudinary,
+                2022).
+              </li>
+              <li>
+                <strong>gb82 Dataset</strong>: The gb82 Dataset (<a
+                  href="https://files.catbox.moe/y56ho3.tzst"
+                >direct download</a>) was used to validate our results on a
+                dataset consisting entirely of photographic content. 25
+                photographic images were hand-picked to represent a breadth of
+                photographic content to ensure encoders cannot overfit by only
+                minimizing certain classes of artifacts.
+              </li>
+              <li>
+                <strong>Daala subset1</strong>: The <a
+                  href="https://github.com/WyohKnott/image-formats-comparison"
+                >Daala subset1</a> dataset contains a variety of larger
+                photographic images, and was used to validate our results on a
+                dataset representative of higher-quality photographic content
+                that one might serve on a webpage.
+              </li>
+            </ul>
           </p>
           <p>
             The graphs presented on the AVIF page are real charts generated from
