@@ -153,9 +153,10 @@ body, html {
 #image-switcher {
   max-width: 800px;
   margin: 2rem auto;
+  flex-direction: column;
 }
-
 #image-switcher img {
   max-width: 100%;
   height: auto;
+  flex-direction: column;
 }

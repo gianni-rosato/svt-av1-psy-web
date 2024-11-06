@@ -23,10 +23,13 @@
 
     <header class="banner">
       <picture>
-        <img src="/static/images/comparisons_banner.avif" alt="AVIF Banner" />
+        <img
+          src="/static/images/comparisons_banner.avif"
+          alt="Comparisons Banner"
+        />
       </picture>
       <div class="banner-content">
-        <h1>AVIF</h1>
+        <h1>Compare</h1>
       </div>
     </header>
 
@@ -95,36 +98,34 @@
         });
         document.addEventListener("DOMContentLoaded", () => {
           const images = [
-            "/static/images/comparisons/sandy.jpg",
+            "/static/images/comparisons/sandy.webp",
             "/static/images/comparisons/sandy.avif",
             "/static/images/comparisons/sandy-aom.avif",
             "/static/images/comparisons/sandy.jxl",
           ];
           const subtitles = [
-            "JPEG | 545.4 KB | SSIMU2 58.4",
+            "WebP | 546.6 KB | SSIMU2 53.6",
             "SVT-AV1-PSY AVIF | 545.9 KB | SSIMU2 63.5",
             "aomenc AVIF | 553.5 KB | SSIMU2 59.2",
             "JPEG XL | 545.2 KB | SSIMU2 65.9",
           ];
-          const args = ["JPEG", "AVIF", "aomenc AVIF", "JPEG XL"];
+          const args = ["WebP", "AVIF", "aomenc AVIF", "JPEG XL"];
           new ImageSwitcher("image-switcher3", images, subtitles, args);
         });
         document.addEventListener("DOMContentLoaded", () => {
           const images = [
             "/static/images/comparisons/window.jpg",
-            "/static/images/comparisons/window.webp",
             "/static/images/comparisons/window.avif",
             "/static/images/comparisons/window-aom.avif",
             "/static/images/comparisons/window.jxl",
           ];
           const subtitles = [
             "JPEG | 98.9 KB | SSIMU2 32.8",
-            "WebP | 99.0 KB | SSIMU2 69.6",
             "SVT-AV1-PSY AVIF | 99.0 KB | SSIMU2 78.8",
             "aomenc AVIF | 99.3 KB | SSIMU2 78.2",
             "JPEG XL | 99.3 KB | SSIMU2 76.5",
           ];
-          const args = ["JPEG", "WebP", "AVIF", "aomenc AVIF", "JPEG XL"];
+          const args = ["JPEG", "AVIF", "aomenc AVIF", "JPEG XL"];
           new ImageSwitcher("image-switcher4", images, subtitles, args);
         });
       </script>
@@ -135,8 +136,61 @@
       <div id="image-switcher3" class="image-container"></div>
       <div id="image-switcher4" class="image-container"></div>
 
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const images = [
+            "/static/images/comparisons/building.jpg",
+            "/static/images/comparisons/building.avif",
+            "/static/images/comparisons/building-aom.avif",
+            "/static/images/comparisons/building.jxl",
+          ];
+          const subtitles = [
+            "JPEG | 165.5 KB | SSIMU2 49.7",
+            "SVT-AV1-PSY AVIF | 103.9 KB | SSIMU2 49.4",
+            "aomenc AVIF | 126.0 KB | SSIMU2 48.9",
+            "JPEG XL | 129.6 KB | SSIMU2 49.3",
+          ];
+          const args = ["JPEG", "AVIF", "aomenc AVIF", "JPEG XL"];
+          new ImageSwitcher("image-switcher5", images, subtitles, args);
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+          const images = [
+            "/static/images/comparisons/beachfront.webp",
+            "/static/images/comparisons/beachfront.avif",
+            "/static/images/comparisons/beachfront-aom.avif",
+            "/static/images/comparisons/beachfront.jxl",
+          ];
+          const subtitles = [
+            "WebP | 261.2 KB | SSIMU2 69.9",
+            "SVT-AV1-PSY AVIF | 187.3 KB | SSIMU2 70.5",
+            "aomenc AVIF | 196.8 KB | SSIMU2 68.7",
+            "JPEG XL | 187.4 KB | SSIMU2 70.2",
+          ];
+          const args = ["WebP", "AVIF", "aomenc AVIF", "JPEG XL"];
+          new ImageSwitcher("image-switcher6", images, subtitles, args);
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+          const images = [
+            "/static/images/comparisons/lake.jpg",
+            "/static/images/comparisons/lake.avif",
+            "/static/images/comparisons/lake-aom.avif",
+            "/static/images/comparisons/lake.jxl",
+          ];
+          const subtitles = [
+            "JPEG | 481.2 KB | SSIMU2 77.8",
+            "SVT-AV1-PSY AVIF | 358.8 KB | SSIMU2 78.0",
+            "aomenc AVIF | 382.3 KB | SSIMU2 77.5",
+            "JPEG XL | 368.1 KB | SSIMU2 77.9",
+          ];
+          const args = ["JPEG", "AVIF", "aomenc AVIF", "JPEG XL"];
+          new ImageSwitcher("image-switcher7", images, subtitles, args);
+        });
+      </script>
+
       <center><h3>Fidelity Matched</h3></center>
-      <center><p><em>Coming Soon!</em></p></center>
+      <div id="image-switcher5" class="image-container"></div>
+      <div id="image-switcher6" class="image-container"></div>
+      <div id="image-switcher7" class="image-container"></div>
 
       <section class="section">
         <div class="section-text">
