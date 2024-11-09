@@ -5,18 +5,24 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Apfel Grotezk Fett";
+  src: url("/static/fonts/ApfelGrotezk-Fett.woff2") format("woff2");
+  font-weight: unset;
+  font-style: normal;
+}
+@font-face {
   font-family: "Mattone";
   src: url("/static/fonts/Mattone-Bold.woff2") format("woff2");
   font-weight: unset;
   font-style: normal;
 }
 a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: underline;
   color: oklch(88.52% 0.2002 194.77);
 }
 li {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 body, html {
   background-color: black;
@@ -25,6 +31,13 @@ body, html {
   font-family: "Apfel Grotezk", Arial, sans-serif;
   line-height: 1.6;
   color: white;
+}
+p, ul, ol {
+  color: oklch(85% 0 0);
+}
+strong {
+  font-family: "Apfel Grotezk Fett";
+  font-weight: unset;
 }
 .navbar-container {
   position: fixed;
@@ -95,7 +108,6 @@ body, html {
 .content h2 {
   font-size: 1.5rem;
   font-family: "Mattone";
-  text-shadow: 1px 1px 2px oklch(70.59% 0.1621 194);
   line-height: 1.6;
 }
 .content h3 {
@@ -105,11 +117,12 @@ body, html {
 }
 .content h4 {
   font-size: 1.25rem;
+  font-family: "Apfel Grotezk Fett";
   line-height: 1.2;
-  font-weight: bold;
+  font-weight: unset;
 }
 .content p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .section {
   display: flex;
@@ -132,6 +145,8 @@ body, html {
   border-radius: 8px;
   width: 100%;
   height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
 }
 .centered-image {
   display: block;
@@ -148,7 +163,7 @@ body, html {
   margin-top: 0.5rem;
   font-style: italic;
   font-family: "Apfel Grotezk", Arial, sans-serif;
-  color: white;
+  color: oklch(80% 0 0);
 }
 #image-switcher {
   max-width: 800px;
