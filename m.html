@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<p>Hello everyone! Merry Christmas to those who celebrate – we have a special gift for you this holiday season in the form of <strong>SVT-AV1-PSY v2.3.0-A</strong>! 🎁</p>
+	<p>Also, this is going to be my last release working heavily on features for SVT-AV1-PSY, at least for a while. You can read more at <a href="https://giannirosato.com/blog/post/end-of-psy/">my blog post</a>, but it has been great fun and I'll miss working on features for this project very much. I'll still be acting as the project's maintainer for now, but very infrequently. Luckily, this project has always been a team effort, and I'm more than certain my talented team members will keep these gears turning without me, so keep tuning in for new releases!</p>
+	<h2>PSY Updates</h2>
+	<h3>Features</h3>
+	<li>Introduced <code>--enable-tf 2</code> which adaptively scales temporal filtering strength based on 64x64 block error</li>
+	<li>Introduced <code>--psy-rd</code>, a feature designed to help retain visual energy to improve perceptual fidelity</li>
+	<h3>Quality & Performance</h3>
+	<li>New default <code>--sharpness</code> value of 1</li>
+	<li>Allowed use of additional interpolation levels for sub pixel motion estimation to improve quality at preset -1</li>
+	<li>Variance Boost now samples across three octiles for more consistent boosting behavior</li>
+	<li>Increased sharpness on keyframes relative to user-configured <code>--sharpness</code> value when using Tune 3</li>
+	<h3>Bug Fixes</h3>
+	<li>Fixed a bug preventing use of <code>--fast-decode 2</code></li>
+	<li>Fixed crashing with Tune 3 at high CRF values (#96)</li>
+	<li>Fixed a bug where CRF and MBR values weren't printing correctly to the terminal</li>
+	<h2>Support Us</h2>
+	<p>As SVT-AV1-PSY's codebase has become more complex and the encoder's capabilities have increased dramatically, our efforts have scaled in kind. We have poured hours into coding, testing, distributing, and supporting this piece of open-source software entirely for free, and our work isn't stopping any time soon.</p>
+	<p>If you appreciate the work that we do and you'd like to support us, we are always excited to see code contributions from outside of the core development team. Otherwise, you can support us monetarily via the links below.</p>
+	<p><strong>Julio Barba</strong>: <em>Coming Soon</em></p>
+	<p><strong>BlueSwordM</strong>: <em>Coming Soon</em></p>
+	<p><strong>Clybius</strong>: <em>Coming Soon</em></p>
+	<p><strong>Gianni Rosato</strong>: <a href="https://github.com/sponsors/gianni-rosato?o=esc">Donate</a></p>
+	<p>You can also visit our website at <a href="https://svt-av1-psy.com/">svt-av1-psy.com</a>. Any support you can offer goes a long way, and we sincerely appreciate it. ♥️</p>
+	<h2>Binaries</h2>
+	<p>> <em>Coming Soon</em></p>
+	<p><em>Thanks for using SVT-AV1-PSY!</em> <3</p>
+	<p><strong>Full Changelog</strong>: https://github.com/gianni-rosato/svt-av1-psy/commits/v2.3.0-A</p>
+</html>
