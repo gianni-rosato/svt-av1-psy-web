@@ -61,6 +61,47 @@
         </div>
       </section>
 
+      <section id="v2.3.0-B" class="section">
+        <div class="section-text">
+          <h2>SVT-AV1-PSY v2.3.0-B</h2>
+          <p>
+              Hello and good evening everyone! I hope you're all doing well time despite current events.
+          </p>
+          <p>We've recently polished up the latest release of SVT-AV1-PSY and have even added a few things for you to play with.</p>
+          <h2>PSY Updates</h2>
+          <h3>Features</h3>
+          <ul>
+            <li>
+                <code>--spy-rd</code> has been added: it's a psychovisually-based metric focused on enhancing sharpness and detail retention, with a slight trade-off in blocking and banding artifacts, without deeply affecting RD/RDO decisions like psy-rd.
+                <strong>it can be used independently or alongside psy-rd.</strong>.
+            </li>
+          </ul>
+          <h3>Quality & Performance</h3>
+          <ul>
+            <li><code>--tune 0</code> can now be used alongside --psy-rd. Test it out and see how it performs for your usecases.</li>
+            <li>
+                <code>--sharpness>0</code> now enables sharper transform optimizations.
+            </li>
+            <li>
+                Improved film grain synthesis parallelism: greatly improved speed on multi-threaded encodes using in-encoder grain synth!
+            </li>
+          </ul>
+          <h3>Bug Fixes</h3>
+          <ul>
+            <li>
+                <code>--psy-rd</code> has been fully fixed. This also improves general performance in many ways, performance and visual quality included.
+            </li>
+          </ul>
+          <h3 id="support-us">Support Us</h3>
+          <a href="/about/">See About Page</a>
+          <p><em>Thanks for using SVT-AV1-PSY!</em> &lt;3</p>
+          <p>
+            <strong>Full Changelog</strong>: <a
+              href="https://github.com/gianni-rosato/svt-av1-psy/commits/v2.3.0-B"
+            >https://github.com/gianni-rosato/svt-av1-psy/commits/v2.3.0-B</a>
+          </p>
+        </div>
+      </section>
       <section id="v2.3.0-A" class="section">
         <div class="section-text">
           <h2>SVT-AV1-PSY v2.3.0-A</h2>
