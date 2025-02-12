@@ -1,0 +1,110 @@
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.comparison-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  pointer-events: none; /* Prevents dragging of images */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.comparison-slider .overlay {
+  clip-path: inset(0 50% 0 0);
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: white;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.codec-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.codec-button {
+  font-size: 1.2rem;
+  font-family: "Apfel Grotezk", Arial, sans-serif;
+  background-color: oklch(0% 0 0);
+  box-shadow: 0 0 10px oklch(88.52% 0.2002 194.77 / 30%);
+  border: 1px solid oklch(40% 0 0);
+  border-radius: 5px;
+  color: oklch(100% 0 0);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.codec-button:hover {
+  background: oklch(20% 0 0);
+  color: oklch(88.52% 0.2002 194.77);
+}
+
+.codec-button.active {
+  background: oklch(20% 0 0);
+  color: oklch(88.52% 0.2002 194.77);
+  border-color: oklch(88.52% 0.2002 194.77);
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: oklch(88.52% 0.2002 194.77);
+  transform: translate(-50%, -50%);
+  cursor: ew-resize;
+}
+
+.comparison-controls {
+  width: 100%;
+  max-width: 1280px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px; /* Add some padding for small screens */
+}
+
+/* Add responsive styles for small screens */
+@media (max-width: 768px) {
+  .slider-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .codec-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .comparison-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
